@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>pp | Hexo</title>
+  <title>自学笔记1解释型语言与编译型语言 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="kkkkkbbjn">
+  <meta name="description" content="程序的执行机器执行程序需要将源码转化成二进制指令，这时候需要一个“中介”完成。对应两种编程语言：编译型语言，解释型语言例如，常见c语言作为编译型语言，phython作为解释型语言。也有观点说语言本身无解释编译之分，只是常用执行方式不同。 编译型语言：使用编译器，将源码作为一个整体翻译，转化为目标代码（计算机可识别），再转化为可执行程序（.exe）  优点：编译一次后，再次运行无需重新编译，不再需要">
 <meta property="og:type" content="article">
-<meta property="og:title" content="pp">
-<meta property="og:url" content="http://example.com/2022/09/25/pp/index.html">
+<meta property="og:title" content="自学笔记1解释型语言与编译型语言">
+<meta property="og:url" content="http://example.com/2022/12/29/%E8%A7%A3%E9%87%8A%E6%80%A7%E8%AF%AD%E8%A8%80%E4%B8%8E%E7%BC%96%E8%AF%91%E6%80%A7%E8%AF%AD%E8%A8%80/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="kkkkkbbjn">
+<meta property="og:description" content="程序的执行机器执行程序需要将源码转化成二进制指令，这时候需要一个“中介”完成。对应两种编程语言：编译型语言，解释型语言例如，常见c语言作为编译型语言，phython作为解释型语言。也有观点说语言本身无解释编译之分，只是常用执行方式不同。 编译型语言：使用编译器，将源码作为一个整体翻译，转化为目标代码（计算机可识别），再转化为可执行程序（.exe）  优点：编译一次后，再次运行无需重新编译，不再需要">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-09-25T12:20:40.000Z">
-<meta property="article:modified_time" content="2022-09-25T12:21:53.676Z">
+<meta property="article:published_time" content="2022-12-29T11:13:48.000Z">
+<meta property="article:modified_time" content="2022-12-29T12:00:11.714Z">
 <meta property="article:author" content="missbyebye">
 <meta name="twitter:card" content="summary">
   
@@ -73,10 +73,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-pp" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="程序的运行-解释性语言与编译性语言" class="h-entry article article-type-程序的运行" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/09/25/pp/" class="article-date">
-  <time class="dt-published" datetime="2022-09-25T12:20:40.000Z" itemprop="datePublished">2022-09-25</time>
+    <a href="/2022/12/29/%E8%A7%A3%E9%87%8A%E6%80%A7%E8%AF%AD%E8%A8%80%E4%B8%8E%E7%BC%96%E8%AF%91%E6%80%A7%E8%AF%AD%E8%A8%80/" class="article-date">
+  <time class="dt-published" datetime="2022-12-29T11:13:48.000Z" itemprop="datePublished">2022-12-29</time>
 </a>
     
   </div>
@@ -87,7 +87,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      pp
+      自学笔记1解释型语言与编译型语言
     </h1>
   
 
@@ -95,12 +95,25 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>kkkkkbbjn</p>
+        <h1 id="程序的执行"><a href="#程序的执行" class="headerlink" title="程序的执行"></a>程序的执行</h1><p>机器执行程序需要将源码转化成二进制指令，这时候需要一个“中介”完成。<br>对应两种编程语言：编译型语言，解释型语言<br>例如，常见c语言作为编译型语言，phython作为解释型语言。<br>也有观点说语言本身无解释编译之分，只是常用执行方式不同。</p>
+<h2 id="编译型语言："><a href="#编译型语言：" class="headerlink" title="编译型语言："></a>编译型语言：</h2><p>使用编译器，将源码作为一个整体翻译，转化为目标代码（计算机可识别），再转化为可执行程序（.exe）</p>
+<ul>
+<li>优点：编译一次后，再次运行无需重新编译，不再需要源码和编译器，可脱离开发环境运行。</li>
+<li>缺点：可移植性差，编译器一次转化成特定操作系统（windows,linux…）的机器码，机器码（可执行程序）彼此不能转化通用。不同操作系统支持的函数，类型，变量可能不同，源代码也可能不能通用。</li>
+</ul>
+<h2 id="解释型语言："><a href="#解释型语言：" class="headerlink" title="解释型语言："></a>解释型语言：</h2><p>使用解释器，一边解释一边执行。</p>
+<ul>
+<li>优点：可以对源码选择性的解释，跨平台性好，相同的源码可以在不同操作系统下运行，因为不同操作系统对应了不同的解释器，可以将源码转化为不同的机器码。</li>
+<li>缺点：每次执行程序都要进行解释，效率低于编译型语言</li>
+</ul>
+<blockquote>
+<p>例子 当我们说“下载一个程序（软件）”时，不同类型的语言有不同的含义：<br> 对于编译型语言，我们下载到的是可执行文件，源代码被作者保留，所以编译型语言的程序一般是闭源的；<br> 对于解释型语言，我们下载到的是所有的源代码，因为作者不给源代码就没法运行，所以解释型语言的程序一般是开源的。</p>
+</blockquote>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/09/25/pp/" data-id="cl8hb9d8m00005otlfp170a5y" data-title="pp" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/29/%E8%A7%A3%E9%87%8A%E6%80%A7%E8%AF%AD%E8%A8%80%E4%B8%8E%E7%BC%96%E8%AF%91%E6%80%A7%E8%AF%AD%E8%A8%80/" data-id="clc923toj0003hgtl610l9l8w" data-title="自学笔记1解释型语言与编译型语言" class="article-share-link">分享</a>
       
       
       
@@ -110,19 +123,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/09/27/kb/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/12/29/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B01%E8%A7%A3%E9%87%8A%E5%9E%8B%E8%AF%AD%E8%A8%80%E4%B8%8E%E7%BC%96%E8%AF%91%E5%9E%8B%E8%AF%AD%E8%A8%80/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前一篇</strong>
       <div class="article-nav-title">
         
-          kb
+          自学笔记1解释型语言与编译型语言
         
       </div>
     </a>
   
   
-    <a href="/2022/09/25/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/11/09/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">后一篇</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">计算机的前世今生</div>
     </a>
   
 </nav>

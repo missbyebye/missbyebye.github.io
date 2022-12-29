@@ -6,15 +6,15 @@
   
   <title>计算机如何处理信息 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="计算机导论  计算机如何处理信息1文字 字符 任何文字或符号，不同类型字符可能占字节不同，同一字符占字节数还可能与编码有关 字符集 符号 字符集合 例 基本的ascii编码 GBK（可对应中文二进制转化），Unicode全球汇总的，非常大 字符集编码 不同二进制数表示不同字符  乱码问题 发件人与收件人使用不同编码方式 文字  字库 物理存在的 图片 每种字形是一个字库，可以开发不同字库两种表示（">
+  <meta name="description" content="计算机导论  计算机如何处理信息1文字 字符 任何文字或符号，不同类型字符可能占字节不同，同一字符占字节数还可能与编码有关 字符集 符号 字符集合 每个字对应编码，不同字符集可能对应同一字的不同编码 例 基本的ascii编码 GBK（可对应中文二进制转化），Unicode全球汇总的，非常大 字符集编码 不同二进制数表示不同字符 乱码问题 发件人与收件人使用不同编码方式 文字 字库 物理存在的 图片">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算机如何处理信息">
 <meta property="og:url" content="http://example.com/2022/10/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E4%BF%A1%E6%81%AF/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="计算机导论  计算机如何处理信息1文字 字符 任何文字或符号，不同类型字符可能占字节不同，同一字符占字节数还可能与编码有关 字符集 符号 字符集合 例 基本的ascii编码 GBK（可对应中文二进制转化），Unicode全球汇总的，非常大 字符集编码 不同二进制数表示不同字符  乱码问题 发件人与收件人使用不同编码方式 文字  字库 物理存在的 图片 每种字形是一个字库，可以开发不同字库两种表示（">
+<meta property="og:description" content="计算机导论  计算机如何处理信息1文字 字符 任何文字或符号，不同类型字符可能占字节不同，同一字符占字节数还可能与编码有关 字符集 符号 字符集合 每个字对应编码，不同字符集可能对应同一字的不同编码 例 基本的ascii编码 GBK（可对应中文二进制转化），Unicode全球汇总的，非常大 字符集编码 不同二进制数表示不同字符 乱码问题 发件人与收件人使用不同编码方式 文字 字库 物理存在的 图片">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-10-19T10:08:01.000Z">
-<meta property="article:modified_time" content="2022-10-19T10:12:25.708Z">
+<meta property="article:modified_time" content="2022-11-16T00:10:26.139Z">
 <meta property="article:author" content="missbyebye">
 <meta name="twitter:card" content="summary">
   
@@ -97,25 +97,56 @@
       
         <h1 id="计算机导论-计算机如何处理信息1"><a href="#计算机导论-计算机如何处理信息1" class="headerlink" title="计算机导论  计算机如何处理信息1"></a>计算机导论  计算机如何处理信息1</h1><h2 id="文字"><a href="#文字" class="headerlink" title="文字"></a>文字</h2><ul>
 <li>字符 任何文字或符号，不同类型字符可能占字节不同，同一字符占字节数还可能与编码有关</li>
-<li>字符集 符号 字符集合 例 基本的ascii编码 GBK（可对应中文二进制转化），Unicode全球汇总的，非常大</li>
-<li>字符集编码 不同二进制数表示不同字符 </li>
+<li>字符集 符号 字符集合 每个字对应编码，不同字符集可能对应同一字的不同编码 例 基本的ascii编码 GBK（可对应中文二进制转化），Unicode全球汇总的，非常大</li>
+<li>字符集编码 不同二进制数表示不同字符</li>
 <li>乱码问题 发件人与收件人使用不同编码方式</li>
-<li>文字 </li>
+<li>文字</li>
 <li>字库 物理存在的 图片 每种字形是一个字库，可以开发不同字库<br>两种表示（点阵 点阵表示，不适合放大 ，矢量 曲线表示）</li>
 </ul>
 <h2 id="声音"><a href="#声音" class="headerlink" title="声音"></a>声音</h2><p>声卡</p>
 <ul>
-<li>录入 连续信号转化为数字信号  </li>
-<li>输出 相反，模拟连续信号</li>
+<li><p>录入 连续信号转化为数字信号</p>
+</li>
+<li><p>输出 相反，模拟连续信号</p>
+</li>
+<li><p>对音乐采样 数据量大，存储量大，音色好，音损小（不同区间音用不同数据表示，相隔时间小，音损更小）</p>
+</li>
+<li><p>midi用各种频率声音合成</p>
+</li>
 </ul>
-<ol>
-<li>对音乐采样 数据量大，存储量大，音色好，音损小（不同区间音用不同数据表示，相隔时间小，音损更小）</li>
-<li>midi用各种频率声音合成</li>
-</ol>
+<p>比特率（bps 采样时每秒数据量bit数）&#x3D;采样率（Hz，每秒多少次） *采样精度（bit，每次采集声音数据大小) *声道数</p>
+<p>1kbps&#x3D;1000bit&#x2F;s&#x3D;1000&#x2F;8(B&#x2F;s).</p>
+<p>1Mbps&#x3D;1024Kbps&#x3D;1024*1024bit&#x2F;s</p>
+<pre><code>注意：在 b 和 B 等数据量单位中,大写K----1024，小写k------1000
+</code></pre>
+<p>采样率单位是 Hz,所以 K &#x3D; 1000</p>
+<p>数据量</p>
+<p>采样频率×量化位数×声道数×时间（秒） 得出的结果单位是 b</p>
+<p>**采样频率×量化位数×声道数×时间（秒）&#x2F; 8 ** 得出的结果单位是 B</p>
+<p>**采样频率×量化位数×声道数×时间（秒）&#x2F; 8 &#x2F; 1024 ** 得出的结果单位是 KB</p>
+<p>采样频率×量化位数×声道数×时间（秒）&#x2F;8 &#x2F; 1024 &#x2F; 1024 得出的结果单位是 MB<br>————————————————<br>版权声明：本文为CSDN博主「技术从未如此性感」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/u013749540/article/details/80178976">https://blog.csdn.net/u013749540/article/details/80178976</a></p>
+<ul>
+<li>采样位数 采样精度\</li>
+</ul>
+<blockquote>
+<p>采样位数可以理解为采集卡处理声音的解析度。这个数值越大，解析度就越高，录制和回放的声音就越真实。我们首先要知道：电脑中的声音文件是用数字0和1来 表示的。所以在电脑上录音的本质就是把模拟声音信号转换成数字信号。反之，在播放时则是把数字信号还原成模拟声音信号输出。采集卡的位是指采集卡在采集和 播放声音文件时所使用数字声音信号的二进制位数。采集卡的位客观地反映了数字声音信号对输入声音信号描述的准确程度。8位代表2的8次方–256，16 位则代表2的16次方–64K。比较一下，一段相同的音乐信息，16位声卡能把它分为64K个精度单位进行处理，而8位声卡只能处理256个精度单位， 造成了较大的信号损失，最终的采样效果自然是无法相提并论的。</p>
+<ul>
+<li>音频采样频率 Fs\</li>
+</ul>
+<p>数码音频系统是通过将声波波形转换成一连串的二进制数据来再现原始声音的，实现这个步骤使用的设备是模&#x2F;数转换器（A&#x2F;D）它以每秒上万次的速率对声波进 行采样，每一次采样都记录下了原始模拟声波在某一时刻的状态，称之为样本。将一串的样本连接起来，就可以描述一段声波了，把每一秒钟所采样的数目称为采样 频率或采率，单位为HZ（赫兹）。采样频率越高所能描述的声波频率就越高。 采样频率是指录音设备在一秒钟内对声音信号的采样次数，采样频率越高声音的还原就越真实越自然。在当今的主流采集卡上，采样频率一般共分为 22.05KHz、44.1KHz、48KHz三个等级，22.05 KHz只能达到FM广播的声音品质，44.1KHz则是理论上的CD音质界限，48KHz则更加精确一些。对于高于48KHz的采样频率人耳已无法辨别出 来了，所以在电脑上没有多少使用价值</p>
+</blockquote>
+<p>作者：KevinXu<br>链接：<a target="_blank" rel="noopener" href="https://juejin.cn/post/6963544535263608863">https://juejin.cn/post/6963544535263608863</a><br>来源：稀土掘金<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <h2 id="图像"><a href="#图像" class="headerlink" title="图像"></a>图像</h2><p>分类</p>
 <ul>
-<li>位图图像 像素表示<br>不同图片格式 不同编码方式 </li>
-<li>矢量图像 数据量小，放大还是线，模拟的有误差<br>分类2 二维图像 三维图像<br>图像分辨率 像素矩阵的大小<br>颜色 红绿蓝三基色<br>彩色  三基色量不同 16进制表示 红R绿G蓝B 数据位越长，颜色越丰富<br>灰度<br>黑白 只需01表示黑白</li>
+<li>位图图像 像素表示<br>不同图片格式 不同编码方式</li>
+</ul>
+<ol>
+<li>图像分辨率 像素矩阵的大小 例 480<em>210 分为480</em>210个小格子，表示图像大小<br>颜色 红绿蓝三基色</li>
+<li>黑白图像\灰度图像 只需01表示黑白程度       像素中的每一个都表示为数值，而这些数字称为 <strong>像素值</strong> 。这些像素值表示像素的强度。对于灰度或黑白图像，我们的像素值范围是0到255。一张画面的像素值组成一个数字矩阵 0黑–255白</li>
+<li>彩色图像（RGB）  每个彩色图像都是由三种颜色或3个通道（红色，绿色和蓝色）叠加生成。每个通道类似黑白图像的单位强度表示，三基色量不同 6位16进制 例#RRGGBB 16进制表示 红R绿G蓝B 数据位越长，颜色越丰富<br>灰度</li>
+</ol>
+<ul>
+<li>矢量图像 数据量小，放大还是线，模拟的有误差</li>
 </ul>
 <h2 id="影像"><a href="#影像" class="headerlink" title="影像"></a>影像</h2><p>数字视频 数字表示的影像<br>动感 视觉暂留 给人脑动感</p>
 <ul>
@@ -125,7 +156,15 @@
 <li>二维 三维 （建模，编辑材质，贴图表示纹理颜色，灯光，动画编辑，渲染，生成帧图像序列）</li>
 <li>造型动画 帧动画<br>（绘制关键帧，计算机自动补齐其余帧）</li>
 </ol>
-<h2 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h2><h2 id="虚拟现实"><a href="#虚拟现实" class="headerlink" title="虚拟现实"></a>虚拟现实</h2><p>传感辅助设施体验 计算机模拟现实世界<br>特点 沉浸 交互 想象</p>
+<h2 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h2><h2 id="虚拟现实vr"><a href="#虚拟现实vr" class="headerlink" title="虚拟现实vr"></a>虚拟现实vr</h2><p>传感辅助设施体验 计算机模拟现实世界<br>特点 沉浸 交互 想象</p>
+<h2 id="增强现实ar"><a href="#增强现实ar" class="headerlink" title="增强现实ar"></a>增强现实ar</h2><h2 id="数据与信息（信息检索）"><a href="#数据与信息（信息检索）" class="headerlink" title="数据与信息（信息检索）"></a>数据与信息（信息检索）</h2><ul>
+<li>找文本<br>关键词搜索</li>
+<li>语音<br>转换文本</li>
+<li>声音<br>文字检索 示例检索（底层数据匹配）</li>
+<li>图像<br>文字 颜色 示例检索</li>
+<li>影像<br>文字 帧 镜头</li>
+<li>基于内容的信息检索</li>
+</ul>
 
       
     </div>
@@ -139,6 +178,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2022/10/26/%E9%80%9A%E4%BF%A1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          通信
+        
+      </div>
+    </a>
   
   
     <a href="/2022/09/27/kb/" id="article-nav-older" class="article-nav-link-wrap">
@@ -168,7 +216,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">十一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a></li></ul>
     </div>
   </div>
 
@@ -181,23 +229,23 @@
       <ul>
         
           <li>
-            <a href="/2022/10/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E4%BF%A1%E6%81%AF/">计算机如何处理信息</a>
+            <a href="/2022/12/29/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B01%E8%A7%A3%E9%87%8A%E5%9E%8B%E8%AF%AD%E8%A8%80%E4%B8%8E%E7%BC%96%E8%AF%91%E5%9E%8B%E8%AF%AD%E8%A8%80-1/">自学笔记1解释型语言与编译型语言</a>
           </li>
         
           <li>
-            <a href="/2022/09/27/kb/">kb</a>
+            <a href="/2022/12/29/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B01%E8%A7%A3%E9%87%8A%E5%9E%8B%E8%AF%AD%E8%A8%80%E4%B8%8E%E7%BC%96%E8%AF%91%E5%9E%8B%E8%AF%AD%E8%A8%80/">自学笔记1解释型语言与编译型语言</a>
           </li>
         
           <li>
-            <a href="/2022/09/25/001-1/">1</a>
+            <a href="/2022/12/29/%E8%A7%A3%E9%87%8A%E6%80%A7%E8%AF%AD%E8%A8%80%E4%B8%8E%E7%BC%96%E8%AF%91%E6%80%A7%E8%AF%AD%E8%A8%80/">自学笔记1解释型语言与编译型语言</a>
           </li>
         
           <li>
-            <a href="/2022/09/25/001/">1</a>
+            <a href="/2022/11/09/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/">计算机的前世今生</a>
           </li>
         
           <li>
-            <a href="/2022/09/25/pp/">pp</a>
+            <a href="/2022/10/26/%E9%80%9A%E4%BF%A1/">通信</a>
           </li>
         
       </ul>
