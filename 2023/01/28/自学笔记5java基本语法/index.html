@@ -14,7 +14,7 @@
 <meta property="og:description" content="注释 字面量类c语言布尔值ture false默认整数int型，小数double型写一个整数字面量变成long类型，需要在其后加l&#x2F;L写一个小数字面量变成float类型，需要在其后加f&#x2F;F  变量补充：进制转换 十进制转二进制：除二取余法 二进制转八进制：三位二进制作为一个单元，最小0，最大7，共8个数字 例：01100001&gt;01,100,001&gt;1,4,1&amp;g">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-01-28T11:25:34.000Z">
-<meta property="article:modified_time" content="2023-01-28T11:26:14.680Z">
+<meta property="article:modified_time" content="2023-05-31T07:01:01.948Z">
 <meta property="article:author" content="missbyebye">
 <meta name="twitter:card" content="summary">
   
@@ -103,12 +103,12 @@
 <p>十进制转二进制：除二取余法</p>
 <p>二进制转八进制：三位二进制作为一个单元，最小0，最大7，共8个数字</p>
 <p><em>例：01100001&gt;01,100,001&gt;1,4,1&gt;141</em></p>
-<p>二进制转十六进制：以四位二进制作为一个单元，0-15，用0-9 AB C D E F 代表</p>
+<p>二进制转十六进制：以四位二进制作为一个单元，0-15，用0-9 A B C D E F 代表</p>
 <p><em>例：01100001&gt;0110,0001&gt;61</em></p>
 <p><em>11111010&gt;1111,1010&gt;FA</em></p>
-<p>二进制数：0b或0B开头 八进制数：0开头 十六进制数：0x或0X开头</p>
+<p><strong>二进制数：0b或0B开头 八进制数：0开头 十六进制数：0x或0X开头</strong></p>
 </li>
-<li><h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><p>基本数据类型：</p>
+<li><h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><p>基本数据类型（4类8种）：</p>
 <table>
 <thead>
 <tr>
@@ -125,7 +125,7 @@
 <tr>
 <td></td>
 <td>short</td>
-<td></td>
+<td>-32768~32767</td>
 </tr>
 <tr>
 <td></td>
@@ -158,9 +158,20 @@
 <td>ture,false</td>
 </tr>
 </tbody></table>
-<p>c语言中char类型占一个字节，中文字符占两个字节，所以不能用来存储，但java中char占两个字节，可以存储一个中文汉字<br>引用数据类型：String</p>
+<p>布尔类型两个取值false ture 不对应任何整数（不同于c）</p>
 </li>
-<li><h4 id="关键字-标识符"><a href="#关键字-标识符" class="headerlink" title="关键字 标识符"></a>关键字 标识符</h4></li>
+<li><p>浮点型 <strong>单精度后缀f或F</strong>,否则默认双精度（双精度后缀d或D）</p>
+</li>
+<li><p>长整数性定义时如果超过int型范围必须加L&#x2F;l，没超过可以不加</p>
+</li>
+<li><p>c语言中char类型占一个字节，中文字符占两个字节，所以不能用来存储，但java中char占两个字节，可以存储一个中文汉字<br>引用数据类型（复合数据类型）：String 数组类 接口</p>
+</li>
+<li><h4 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h4><p>具有专门意义用途，不可当作一般标识符</p>
+</li>
+<li><h4 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h4><p>变量名 方法名 类名 常量…</p>
+<p>不可与关键字重名</p>
+<p>不以数字开头，由字母数字下划线“_”“$”组成</p>
+</li>
 </ul>
 
       
@@ -176,11 +187,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2023/01/28/%E5%8E%9F%E7%A0%81%E5%8F%8D%E7%A0%81%E8%A1%A5%E7%A0%81/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2023/01/29/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B07%E8%BF%90%E7%AE%97%E7%AC%A6/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前一篇</strong>
       <div class="article-nav-title">
         
-          原码反码补码
+          自学笔记7运算符
         
       </div>
     </a>
@@ -213,7 +224,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">一月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">十一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">一月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">九月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">四月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">三月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">一月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">十一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a></li></ul>
     </div>
   </div>
 
@@ -226,23 +237,23 @@
       <ul>
         
           <li>
-            <a href="/2023/01/28/%E5%8E%9F%E7%A0%81%E5%8F%8D%E7%A0%81%E8%A1%A5%E7%A0%81/">原码反码补码</a>
+            <a href="/2024/01/28/%E6%88%91%E5%9B%9E%E6%9D%A5%E4%BA%86/">我回来了</a>
           </li>
         
           <li>
-            <a href="/2023/01/28/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B05java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">自学笔记5java基本语法</a>
+            <a href="/2023/09/04/java%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E8%B7%B5/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2023/01/20/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B06%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/">自学笔记6类型转换</a>
+            <a href="/2023/04/27/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E8%AE%BA%E6%96%87/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2023/01/18/%E5%8E%9F%E7%A0%81%EF%BC%8C%E8%A1%A5%E7%A0%81%EF%BC%8C%E5%8F%8D%E7%A0%81/">原码，补码，反码</a>
+            <a href="/2023/04/26/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E7%B1%BB%E5%9E%8B%E5%A4%A7%E7%BA%B2/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2023/01/13/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B04IDEA%E5%BC%80%E5%8F%91/">自学笔记4IDEA开发</a>
+            <a href="/2023/04/18/%E5%BC%82%E5%B8%B8/">(no title)</a>
           </li>
         
       </ul>
@@ -258,7 +269,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       
-      &copy; 2023 missbyebye<br>
+      &copy; 2024 missbyebye<br>
       Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>

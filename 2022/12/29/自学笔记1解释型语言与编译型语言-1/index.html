@@ -6,15 +6,15 @@
   
   <title>自学笔记1解释型语言与编译型语言 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="程序的执行机器执行程序需要将源码转化成二进制指令，这时候需要一个“中介”完成。对应两种编程语言：编译型语言，解释型语言例如，常见c语言作为编译型语言，phython作为解释型语言。也有观点说语言本身无解释编译之分，只是常用执行方式不同。 编译型语言：使用编译器，将源码作为一个整体翻译，转化为目标代码（计算机可识别），再转化为可执行程序（.exe）  优点：编译一次后，再次运行无需重新编译，不再需要">
+  <meta name="description" content="程序的执行机器执行程序需要将源码转化成二进制指令，这时候需要一个“中介”完成。对应两种编程语言：编译型语言，解释型语言例如，常见c语言作为编译型语言，phython作为解释型语言。也有观点说语言本身无解释编译之分，只是常用执行方式不同。 编译型语言：使用编译器，将源码作为一个整体翻译，转化为目标代码（.obj计算机可识别），再转化为可执行程序（.exe）  优点：编译一次后，再次运行无需重新编译，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="自学笔记1解释型语言与编译型语言">
 <meta property="og:url" content="http://example.com/2022/12/29/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B01%E8%A7%A3%E9%87%8A%E5%9E%8B%E8%AF%AD%E8%A8%80%E4%B8%8E%E7%BC%96%E8%AF%91%E5%9E%8B%E8%AF%AD%E8%A8%80-1/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="程序的执行机器执行程序需要将源码转化成二进制指令，这时候需要一个“中介”完成。对应两种编程语言：编译型语言，解释型语言例如，常见c语言作为编译型语言，phython作为解释型语言。也有观点说语言本身无解释编译之分，只是常用执行方式不同。 编译型语言：使用编译器，将源码作为一个整体翻译，转化为目标代码（计算机可识别），再转化为可执行程序（.exe）  优点：编译一次后，再次运行无需重新编译，不再需要">
+<meta property="og:description" content="程序的执行机器执行程序需要将源码转化成二进制指令，这时候需要一个“中介”完成。对应两种编程语言：编译型语言，解释型语言例如，常见c语言作为编译型语言，phython作为解释型语言。也有观点说语言本身无解释编译之分，只是常用执行方式不同。 编译型语言：使用编译器，将源码作为一个整体翻译，转化为目标代码（.obj计算机可识别），再转化为可执行程序（.exe）  优点：编译一次后，再次运行无需重新编译，">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-12-29T12:21:40.000Z">
-<meta property="article:modified_time" content="2022-12-29T12:22:28.828Z">
+<meta property="article:modified_time" content="2023-02-28T08:05:11.909Z">
 <meta property="article:author" content="missbyebye">
 <meta name="twitter:card" content="summary">
   
@@ -96,7 +96,7 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <h1 id="程序的执行"><a href="#程序的执行" class="headerlink" title="程序的执行"></a>程序的执行</h1><p>机器执行程序需要将源码转化成二进制指令，这时候需要一个“中介”完成。<br>对应两种编程语言：编译型语言，解释型语言<br>例如，常见c语言作为编译型语言，phython作为解释型语言。<br>也有观点说语言本身无解释编译之分，只是常用执行方式不同。</p>
-<h2 id="编译型语言："><a href="#编译型语言：" class="headerlink" title="编译型语言："></a>编译型语言：</h2><p>使用编译器，将源码作为一个整体翻译，转化为目标代码（计算机可识别），再转化为可执行程序（.exe）</p>
+<h2 id="编译型语言："><a href="#编译型语言：" class="headerlink" title="编译型语言："></a>编译型语言：</h2><p>使用编译器，将源码作为一个整体翻译，转化为目标代码（.obj计算机可识别），再转化为可执行程序（.exe）</p>
 <ul>
 <li>优点：编译一次后，再次运行无需重新编译，不再需要源码和编译器，可脱离开发环境运行。</li>
 <li>缺点：可移植性差，编译器一次转化成特定操作系统（windows,linux…）的机器码，机器码（可执行程序）彼此不能转化通用。不同操作系统支持的函数，类型，变量可能不同，源代码也可能不能通用。</li>
@@ -107,7 +107,7 @@
 <li>缺点：每次执行程序都要进行解释，效率低于编译型语言</li>
 </ul>
 <blockquote>
-<p>例子 当我们说“下载一个程序（软件）”时，不同类型的语言有不同的含义：<br> 对于编译型语言，我们下载到的是可执行文件，源代码被作者保留，所以编译型语言的程序一般是闭源的；<br> 对于解释型语言，我们下载到的是所有的源代码，因为作者不给源代码就没法运行，所以解释型语言的程序一般是开源的。</p>
+<p>例子 当我们说“下载一个程序（软件）”时，不同类型的语言有不同的含义：<br>对于编译型语言，我们下载到的是可执行文件，源代码被作者保留，所以编译型语言的程序一般是闭源的；<br>对于解释型语言，我们下载到的是所有的源代码，因为作者不给源代码就没法运行，所以解释型语言的程序一般是开源的。</p>
 </blockquote>
 
       
@@ -160,7 +160,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">一月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">十一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">一月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">九月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">四月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">三月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">一月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">十一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a></li></ul>
     </div>
   </div>
 
@@ -173,23 +173,23 @@
       <ul>
         
           <li>
-            <a href="/2023/01/28/%E5%8E%9F%E7%A0%81%E5%8F%8D%E7%A0%81%E8%A1%A5%E7%A0%81/">原码反码补码</a>
+            <a href="/2024/01/28/%E6%88%91%E5%9B%9E%E6%9D%A5%E4%BA%86/">我回来了</a>
           </li>
         
           <li>
-            <a href="/2023/01/28/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B05java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">自学笔记5java基本语法</a>
+            <a href="/2023/09/04/java%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E8%B7%B5/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2023/01/20/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B06%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/">自学笔记6类型转换</a>
+            <a href="/2023/04/27/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E8%AE%BA%E6%96%87/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2023/01/18/%E5%8E%9F%E7%A0%81%EF%BC%8C%E8%A1%A5%E7%A0%81%EF%BC%8C%E5%8F%8D%E7%A0%81/">原码，补码，反码</a>
+            <a href="/2023/04/26/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E7%B1%BB%E5%9E%8B%E5%A4%A7%E7%BA%B2/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2023/01/13/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B04IDEA%E5%BC%80%E5%8F%91/">自学笔记4IDEA开发</a>
+            <a href="/2023/04/18/%E5%BC%82%E5%B8%B8/">(no title)</a>
           </li>
         
       </ul>
@@ -205,7 +205,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       
-      &copy; 2023 missbyebye<br>
+      &copy; 2024 missbyebye<br>
       Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="栈 后进先出 类似地址指针 堆 见new 在堆开辟空间 一维数组声明方式1 int no[]; 方式2 int[] no; 注：  Java数组是一种数据类型（引用数据类型），所以建议采用“方式二”声明数组。 定义数组时不能指定数组的长度，因为数组是一种引用类型，定义数组时，仅仅表示定义了一个引用变量（类似指针），该引用变量没有指向任何有效的内存(nul) 数组是引用类型，在定义完后，未指向任何有">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/03/02/%E6%95%B0%E7%BB%84/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="栈 后进先出 类似地址指针 堆 见new 在堆开辟空间 一维数组声明方式1 int no[]; 方式2 int[] no; 注：  Java数组是一种数据类型（引用数据类型），所以建议采用“方式二”声明数组。 定义数组时不能指定数组的长度，因为数组是一种引用类型，定义数组时，仅仅表示定义了一个引用变量（类似指针），该引用变量没有指向任何有效的内存(nul) 数组是引用类型，在定义完后，未指向任何有">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://file+.vscode-resource.vscode-cdn.net/c%3A/blog/source/_posts/image/%E6%95%B0%E7%BB%84/1677765412032.png">
+<meta property="og:image" content="http://example.com/image/%E6%95%B0%E7%BB%84/1677765582494.png">
+<meta property="og:image" content="http://example.com/image/%E6%95%B0%E7%BB%84/1678174606077.png">
+<meta property="article:published_time" content="2023-03-02T06:01:25.837Z">
+<meta property="article:modified_time" content="2024-01-28T09:37:48.836Z">
+<meta property="article:author" content="missbyebye">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://file+.vscode-resource.vscode-cdn.net/c%3A/blog/source/_posts/image/%E6%95%B0%E7%BB%84/1677765412032.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-数组" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/03/02/%E6%95%B0%E7%BB%84/" class="article-date">
+  <time class="dt-published" datetime="2023-03-02T06:01:25.837Z" itemprop="datePublished">2023-03-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>栈 后进先出 类似地址指针</p>
+<p>堆 见new 在堆开辟空间</p>
+<h1 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h1><h3 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h3><p>方式1 int no[];</p>
+<p>方式2 int[] no;</p>
+<p>注：</p>
+<ol>
+<li>Java数组是一种<strong>数据类型（引用数据类型）</strong>，所以建议采用“方式二”声明数组。</li>
+<li><strong>定义数组时不能指定数组的长度</strong>，因为数组是一种引用类型，定义数组时，仅仅表示定义了一个引用变量（类似指针），该引用变量没有指向任何有效的内存(nul)</li>
+<li>数组是引用类型，在定义完后，未指向任何有效的内存，所以值为<strong>null</strong>，在<strong>栈</strong>内存里</li>
+</ol>
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><blockquote>
+<p>在堆内存中，为数组元素分配内存空间，并为每个数组元素赋初始值。</p>
+<p>在Java 中，使用数组时，如果为数组分配了内存空间，但是没有为数组元素指定初始值，系统会自动为数组元素指定初始值。数组元素的初始值与数组的数据类型有关，对于不同数据类型的数组，其数组元素的初始值是不一样的。下面将列举出不同类型数组元素的初始值。</p>
+<p>. byte在Java 程序中使用数组时，如果没有为数组元素指定初始值，byte 型数组元素的默认初始值为0。</p>
+<p>. short、. int默认初始值为0。</p>
+<p>. long默认初始值为0L。</p>
+<p>. float默认初始值为0.0f。</p>
+<p>. double默认初始值为0.0d。</p>
+<p>. char默认初始值为字符.\u.0000。</p>
+<p>. boolean默认初始值为false。</p>
+<p>. 引用类型(如类、接口等类型)</p>
+<p>在Java 程序中使用数组时，如果没有为数组元素指定初始值，引用类型(如类、接口等类型)数组元素的默认初始值为null，例如，String 类型数组元素的默认初始值就为null。</p>
+<p><img src="https://file+.vscode-resource.vscode-cdn.net/c%3A/blog/source/_posts/image/%E6%95%B0%E7%BB%84/1677765412032.png" alt="1677765412032"></p>
+</blockquote>
+<h4 id="静态初始化"><a href="#静态初始化" class="headerlink" title="静态初始化"></a>静态初始化</h4><p> 程序员指定初始值</p>
+<p>no &#x3D; new int[] {1, 2, 3, 4 , 5};</p>
+<p>合并声明+初始化 int[] no &#x3D; {1,2,3,4,5};</p>
+<h4 id="动态初始化"><a href="#动态初始化" class="headerlink" title="动态初始化"></a>动态初始化</h4><p> 指定长度，系统分配(分配空值)</p>
+<p>no &#x3D; new int[5];</p>
+<p>合并 int[] no &#x3D; new int[5]</p>
+<h3 id="使用数组"><a href="#使用数组" class="headerlink" title="使用数组"></a>使用数组</h3><p>索引</p>
+<p>引用长度（数组作为对象，提供length属性，该属性存储数组长度）</p>
+<p>for(int i&#x3D;0;i&lt;no.length;i++)</p>
+<p>{</p>
+<p>}</p>
+<h1 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h1><h3 id="声明-1"><a href="#声明-1" class="headerlink" title="声明"></a>声明</h3><ol>
+<li>int[][] arr;</li>
+<li>int arr[][];</li>
+</ol>
+<h3 id="初始化-1"><a href="#初始化-1" class="headerlink" title="初始化"></a>初始化</h3><ul>
+<li>动态初始化</li>
+</ul>
+<p>用new关键词初始化（两步）</p>
+<ol>
+<li>数组名&#x3D;new 类型说明符[数组长度][]</li>
+<li>数组名&#x3D;new 类型说明符[数组长度][数组长度]</li>
+</ol>
+<p><img src="/image/%E6%95%B0%E7%BB%84/1677765582494.png" alt="1677765582494"></p>
+<p><img src="/image/%E6%95%B0%E7%BB%84/1678174606077.png" alt="1678174606077"></p>
+<ul>
+<li>静态初始化</li>
+<li>注：JAVA二维数组内存存储不连续，可以看作一维数组的串联（不同于C）</li>
+</ul>
+<h1 id="课堂补充（非数组）：重载"><a href="#课堂补充（非数组）：重载" class="headerlink" title="课堂补充（非数组）：重载"></a>课堂补充（非数组）：重载</h1><p>对于方法：同名不同参 参数个数或者类型不同，执行哪个方法依据传入的参数而定</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/03/02/%E6%95%B0%E7%BB%84/" data-id="clrx9mt360007j4tlbemifkv7" data-title="" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/03/09/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E5%8C%BA%E5%88%AB/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/01/29/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B07%E8%BF%90%E7%AE%97%E7%AC%A6/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">自学笔记7运算符</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">一月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">九月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">四月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">三月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">一月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">十一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/01/28/%E6%88%91%E5%9B%9E%E6%9D%A5%E4%BA%86/">我回来了</a>
+          </li>
+        
+          <li>
+            <a href="/2023/09/04/java%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E8%B7%B5/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/04/27/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E8%AE%BA%E6%96%87/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/04/26/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E7%B1%BB%E5%9E%8B%E5%A4%A7%E7%BA%B2/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/04/18/%E5%BC%82%E5%B8%B8/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 missbyebye<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="异常的含义对于一个程序来说，可能会发生三种错误：语法错误、运行时错误和逻辑错误。  语法错误在使用javac命令编译期间，就可以给用户相应的提示。  运行时错误(异常)是程序在运行中出现意料不到的情况，如除数为零、数组下标越界、需要的文件不存在或打不开、传入参数为空或不符合指定范围等。  逻辑错误是程序的运行结果和预想的结果不一致，这是一种难以调试的错误。 使用Java的异常处理机制主要是处">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/04/18/%E5%BC%82%E5%B8%B8/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="异常的含义对于一个程序来说，可能会发生三种错误：语法错误、运行时错误和逻辑错误。  语法错误在使用javac命令编译期间，就可以给用户相应的提示。  运行时错误(异常)是程序在运行中出现意料不到的情况，如除数为零、数组下标越界、需要的文件不存在或打不开、传入参数为空或不符合指定范围等。  逻辑错误是程序的运行结果和预想的结果不一致，这是一种难以调试的错误。 使用Java的异常处理机制主要是处">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/image/%E5%BC%82%E5%B8%B8/1681807560569.png">
+<meta property="og:image" content="http://example.com/image/%E5%BC%82%E5%B8%B8/1685430482170.png">
+<meta property="og:image" content="http://example.com/image/%E5%BC%82%E5%B8%B8/1681970455136.png">
+<meta property="article:published_time" content="2023-04-18T08:33:17.267Z">
+<meta property="article:modified_time" content="2023-05-30T23:24:18.967Z">
+<meta property="article:author" content="missbyebye">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/image/%E5%BC%82%E5%B8%B8/1681807560569.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-异常" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/04/18/%E5%BC%82%E5%B8%B8/" class="article-date">
+  <time class="dt-published" datetime="2023-04-18T08:33:17.267Z" itemprop="datePublished">2023-04-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="异常的含义"><a href="#异常的含义" class="headerlink" title="异常的含义"></a>异常的含义</h2><p>对于一个程序来说，可能会发生三种错误：语法错误、运行时错误和逻辑错误。</p>
+<p> <strong>语法错误</strong>在使用javac命令编译期间，就可以给用户相应的提示。</p>
+<p> <strong>运行时错误</strong>(异常)是程序在运行中出现意料不到的情况，如除数为零、数组下标越界、需要的文件不存在或打不开、传入参数为空或不符合指定范围等。</p>
+<p> <strong>逻辑错误</strong>是程序的运行结果和预想的结果不一致，这是一种难以调试的错误。</p>
+<p>使用Java的异常处理机制主要是处理运行时的错误，异常就是运行时的错误（系统抛出的）。</p>
+<h2 id="异常分类"><a href="#异常分类" class="headerlink" title="异常分类"></a>异常分类</h2><p>异常类的层次</p>
+<ul>
+<li>异常类的层次：Throwable类是Error类（错误类）和Exception类（异常类）的父类，同时Throwable也是Object的直接子类。</li>
+<li>Error类：指的是系统或运行环境出现的错误，即使捕捉到也无法处理，由Java虚拟机生成并抛出，包括系统崩溃、动态链接失败、虚拟机错误等，在Java程序中不做处理。</li>
+<li>Exception类：许多子类。</li>
+</ul>
+<p><img src="/image/%E5%BC%82%E5%B8%B8/1681807560569.png" alt="1681807560569"></p>
+<p>Exception类</p>
+<p> Exception类:指一些可以被捕获且可能恢复的异常情况，是一般程序中可预知的</p>
+<p> 分为两大类：<strong>运行时（Runtime）异常（<strong><strong>可处理可不处理</strong></strong>）</strong>和<strong>检测（Checked）异常</strong>（必须管）</p>
+<p>Exception类——运行时异常</p>
+<p>RuntimeException（运行时异常）：包括所有RuntimeException类及其子类的实例，如</p>
+<ul>
+<li>除数为0异常：ArithmeticException</li>
+<li>数组访问越界：ArrayIndexOutOfBoundsException</li>
+<li>访问空指针： NullPointerException</li>
+<li><img src="/image/%E5%BC%82%E5%B8%B8/1685430482170.png" alt="1685430482170"></li>
+</ul>
+<p>不需要捕获运行时异常</p>
+<p>Exception类——检测异常（必须处理）</p>
+<p>检测异常：不是RuntimeException类及其子类的异常。如</p>
+<ul>
+<li>I&#x2F;O错误：IOException（输入输出异常）</li>
+<li>找不到要打开的文件：FileNotFoundException</li>
+<li>试图在文件末尾读取数据： EOFException</li>
+</ul>
+<p>检测异常的处理方式</p>
+<ol>
+<li>在Java程序的执行过程中，如果出现了异常事件，就会生成一个异常对象（包括运行时异常和检测异常）。生成的异常对象将<strong>传递给Java运行时系统</strong>，这一异常的产生和提交过程称为抛出（throw）异常。</li>
+<li>当Java运行时系统得到一个异常对象时，它将会寻找处理这一异常的代码(方法)。找到能够处理这种类型的异常的方法后，运行时系统把当前异常对象<strong>交给这个方法进行处理</strong>，这一过程称为捕获（catch）异常。</li>
+</ol>
+<p>try语句块含有可能出现异常的程序代码，可能会抛出一个或多个异常，因此try后面可跟一个或多个catch。</p>
+<ul>
+<li>当try中语句块没有发生异常时，不执行后面的catch语句块。</li>
+<li>多catch情况下，异常类遵循由<strong>子类到父类</strong>，由<strong>具体到抽象</strong>的顺序，或为<strong>并列</strong>关系。</li>
+</ul>
+<p><img src="/image/%E5%BC%82%E5%B8%B8/1681970455136.png" alt="1681970455136"></p>
+<p><strong>finally</strong></p>
+<p>不管try块中的代码是否出现异常，也不管哪一个catch块被执行，finally块总会被执行。</p>
+<p>finally块主要用于<strong>释放资源</strong>。在try块中打开了一些物理资源（如数据库连接、网络连接和磁盘文件），在finally块中要显式释放。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/04/18/%E5%BC%82%E5%B8%B8/" data-id="clrx9mt2z0001j4tl4r4tbowb" data-title="" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/04/26/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E7%B1%BB%E5%9E%8B%E5%A4%A7%E7%BA%B2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/03/28/%E7%BB%A7%E6%89%BF%E5%92%8C%E6%8E%A5%E5%8F%A3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">一月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">九月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">四月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">三月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">一月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">十一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/01/28/%E6%88%91%E5%9B%9E%E6%9D%A5%E4%BA%86/">我回来了</a>
+          </li>
+        
+          <li>
+            <a href="/2023/09/04/java%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E8%B7%B5/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/04/27/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E8%AE%BA%E6%96%87/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/04/26/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E7%B1%BB%E5%9E%8B%E5%A4%A7%E7%BA%B2/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/04/18/%E5%BC%82%E5%B8%B8/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 missbyebye<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
