@@ -71,6 +71,53 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-原码反码补码" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/01/28/%E5%8E%9F%E7%A0%81%E5%8F%8D%E7%A0%81%E8%A1%A5%E7%A0%81/" class="article-date">
+  <time class="dt-published" datetime="2023-01-28T11:41:28.000Z" itemprop="datePublished">2023-01-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/01/28/%E5%8E%9F%E7%A0%81%E5%8F%8D%E7%A0%81%E8%A1%A5%E7%A0%81/">原码反码补码</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>计算机读取整数存储形式：补码</p>
+<h3 id="原码"><a href="#原码" class="headerlink" title="原码"></a><strong>原码</strong></h3><p>整数的二进制</p>
+<h3 id="反码"><a href="#反码" class="headerlink" title="反码"></a><strong>反码</strong></h3><p>正数，它的反码就是其原码（原码和反码相同）；<strong>负数的反码是将原码中 <code>除符号位以外</code>的所有位（数值位）取反</strong></p>
+<h3 id="补码"><a href="#补码" class="headerlink" title="补码"></a><strong>补码</strong></h3><p>对于正数，它的补码就是其原码（原码、反码、补码都相同）； <strong>负数的补码是其反码加 1</strong> 。</p>
+<p><strong>深入思考</strong></p>
+<p>假设以1byte的整数为例，总共能表达的数字数为2^8即256个，第一位为符号位，已知表示范围为-128~127，如果直接以原码表示，那么0会有两个，00000000和10000000，如果取反码，00000000和11111111也都为0，用补码就只有00000000一个0。并且原码不能进行减法运算，反码可以进行减法运算（最高位进位时，需要最低位加1，效率低）且存在两个0计算机难判断，补码运算时最高位溢出可直接丢弃。</p>
+<blockquote>
+<p>以3-2为例<br>计算机运算时，3-2其实是3+（-2）<br><strong>原码</strong><br>3： 00000000 00000000 00000000 00000011  3的源码&#x3D;反码&#x3D;补码<br>-2：10000000 00000000 00000000 00000010  -2的源码<br>3 + (-2)相加得 10000000 00000000 00000000 00000101   此时结果为-5<br><strong>反码</strong><br>3 ： 00000000 00000000 00000011  源码&#x3D;反码&#x3D;补码<br>-2 ： 10000000 00000000 00000010  -2的源码<br>11111111 11111111 11111101  -2的反码<br>反码相加得<br>（最高位多出1进到最低位 ）100000000 00000000 00000001  结果为-1<br><strong>补码</strong><br>3 ： 00000000 00000000 00000000 00000011 源码&#x3D;反码&#x3D;补码<br>-2 ： 10000000 00000000 00000000 00000010   -2的源码<br>11111111 11111111 11111111 11111101   -2的反码<br>11111111 11111111 11111111 11111110   -2的补码<br>补码相加<br>100000000 00000000 00000000 00000001 最高位溢出1，直接丢弃<br>最终结果  00000000 00000000 00000000 00000001   —-1</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/01/28/%E5%8E%9F%E7%A0%81%E5%8F%8D%E7%A0%81%E8%A1%A5%E7%A0%81/" data-id="cldfvvc1v0000lwtleau4a1pc" data-title="原码反码补码" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-自学笔记5java基本语法" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/01/28/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B05java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="article-date">
@@ -260,111 +307,6 @@
     </div>
     <footer class="article-footer">
       <a data-url="http://example.com/2023/01/18/%E5%8E%9F%E7%A0%81%EF%BC%8C%E8%A1%A5%E7%A0%81%EF%BC%8C%E5%8F%8D%E7%A0%81/" data-id="cld3vgj9q00001ctl43thdffl" data-title="原码，补码，反码" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-自学笔记5java基础语法" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/01/17/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B05java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" class="article-date">
-  <time class="dt-published" datetime="2023-01-17T03:05:50.000Z" itemprop="datePublished">2023-01-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/01/17/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B05java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">自学笔记5java基础语法</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a><strong>注释</strong></h4></li>
-<li><h4 id="字面量"><a href="#字面量" class="headerlink" title="字面量"></a>字面量</h4><p>类c语言<br>布尔值ture false<br>默认整数int型，小数double型<br>写一个整数字面量变成long类型，需要在其后加l&#x2F;L<br>写一个小数字面量变成float类型，需要在其后加f&#x2F;F</p>
-</li>
-<li><h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><p><strong>补充：进制转换</strong></p>
-<p>十进制转二进制：除二取余法</p>
-<p>二进制转八进制：三位二进制作为一个单元，最小0，最大7，共8个数字</p>
-<p><em>例：01100001&gt;01,100,001&gt;1,4,1&gt;141</em></p>
-<p>二进制转十六进制：以四位二进制作为一个单元，0-15，用0-9 AB C D E F 代表</p>
-<p><em>例：01100001&gt;0110,0001&gt;61</em></p>
-<p><em>11111010&gt;1111,1010&gt;FA</em></p>
-<p>二进制数：0b或0B开头 八进制数：0开头 十六进制数：0x或0X开头</p>
-</li>
-<li><h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><p>基本数据类型：</p>
-<table>
-<thead>
-<tr>
-<th>数据类型</th>
-<th>关键字</th>
-<th>取值范围</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>整数</td>
-<td>byte</td>
-<td>-128~127</td>
-</tr>
-<tr>
-<td></td>
-<td>short</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>int</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>long</td>
-<td></td>
-</tr>
-<tr>
-<td>浮点数</td>
-<td>float</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>double</td>
-<td></td>
-</tr>
-<tr>
-<td>字符</td>
-<td>char</td>
-<td>0~65535</td>
-</tr>
-<tr>
-<td>布尔</td>
-<td>boolean</td>
-<td>ture,false</td>
-</tr>
-</tbody></table>
-<p>c语言中char类型占一个字节，中文字符占两个字节，所以不能用来存储，但java中char占两个字节，可以存储一个中文汉字<br>引用数据类型：String</p>
-</li>
-<li><h4 id="关键字-标识符"><a href="#关键字-标识符" class="headerlink" title="关键字 标识符"></a>关键字 标识符</h4></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/01/17/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B05java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" data-id="clcznmwnf0000hgtl07xj4a0r" data-title="自学笔记5java基础语法" class="article-share-link">分享</a>
       
       
       
@@ -782,6 +724,10 @@
       <ul>
         
           <li>
+            <a href="/2023/01/28/%E5%8E%9F%E7%A0%81%E5%8F%8D%E7%A0%81%E8%A1%A5%E7%A0%81/">原码反码补码</a>
+          </li>
+        
+          <li>
             <a href="/2023/01/28/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B05java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">自学笔记5java基本语法</a>
           </li>
         
@@ -791,10 +737,6 @@
         
           <li>
             <a href="/2023/01/18/%E5%8E%9F%E7%A0%81%EF%BC%8C%E8%A1%A5%E7%A0%81%EF%BC%8C%E5%8F%8D%E7%A0%81/">原码，补码，反码</a>
-          </li>
-        
-          <li>
-            <a href="/2023/01/17/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B05java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">自学笔记5java基础语法</a>
           </li>
         
           <li>
