@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>计算机视觉与深度学习-图像分类任务介绍 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="前言计算机视觉应用 图片信息检索 图像处理，优化 辅助识别（例：足球摄影自动追踪） 视觉识别（例：人脸识别） 医学图像 …  计算机视觉与其他学科联系 心理学，生物学（应用认知科学，神经科学——为计算机视觉系统提供思路，方法） 计算机，数学（应用机器学习，算法，系统结构——计算机视觉系统的设计方法，用于信息检索） 物理（应用光学——光学传感器是计算机视觉输入） 图像处理（起源）——与计算机视觉区别">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机视觉与深度学习-图像分类任务介绍">
+<meta property="og:url" content="http://example.com/2024/02/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB%E4%BB%BB%E5%8A%A1%E4%BB%8B%E7%BB%8D/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="前言计算机视觉应用 图片信息检索 图像处理，优化 辅助识别（例：足球摄影自动追踪） 视觉识别（例：人脸识别） 医学图像 …  计算机视觉与其他学科联系 心理学，生物学（应用认知科学，神经科学——为计算机视觉系统提供思路，方法） 计算机，数学（应用机器学习，算法，系统结构——计算机视觉系统的设计方法，用于信息检索） 物理（应用光学——光学传感器是计算机视觉输入） 图像处理（起源）——与计算机视觉区别">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB%E4%BB%BB%E5%8A%A1%E4%BB%8B%E7%BB%8D/1708254665978.png">
+<meta property="og:image" content="http://example.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB%E4%BB%BB%E5%8A%A1%E4%BB%8B%E7%BB%8D/1708254827591.png">
+<meta property="og:image" content="http://example.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB%E4%BB%BB%E5%8A%A1%E4%BB%8B%E7%BB%8D/1708255668637.png">
+<meta property="article:published_time" content="2024-02-08T11:03:16.000Z">
+<meta property="article:modified_time" content="2024-02-18T11:28:20.824Z">
+<meta property="article:author" content="missbyebye">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB%E4%BB%BB%E5%8A%A1%E4%BB%8B%E7%BB%8D/1708254665978.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-计算机视觉与深度学习-图像分类任务介绍" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/02/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB%E4%BB%BB%E5%8A%A1%E4%BB%8B%E7%BB%8D/" class="article-date">
+  <time class="dt-published" datetime="2024-02-08T11:03:16.000Z" itemprop="datePublished">2024-02-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      计算机视觉与深度学习-图像分类任务介绍
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h2 id="计算机视觉应用"><a href="#计算机视觉应用" class="headerlink" title="计算机视觉应用"></a>计算机视觉应用</h2><ul>
+<li>图片信息检索</li>
+<li>图像处理，优化</li>
+<li>辅助识别（例：足球摄影自动追踪）</li>
+<li>视觉识别（例：人脸识别）</li>
+<li>医学图像</li>
+<li>…</li>
+</ul>
+<h2 id="计算机视觉与其他学科联系"><a href="#计算机视觉与其他学科联系" class="headerlink" title="计算机视觉与其他学科联系"></a>计算机视觉与其他学科联系</h2><ol>
+<li>心理学，生物学（应用认知科学，神经科学——为计算机视觉系统提供思路，方法）</li>
+<li>计算机，数学（应用机器学习，算法，系统结构——计算机视觉系统的设计方法，用于信息检索）</li>
+<li>物理（应用光学——光学传感器是计算机视觉输入）</li>
+<li>图像处理（起源）——与计算机视觉区别：图像处理输入输出都为图像，计算机视觉输出不限于图像</li>
+<li>自然语言（相互交融） 用于机器人</li>
+<li>…..</li>
+</ol>
+<h2 id="计算机视觉目标"><a href="#计算机视觉目标" class="headerlink" title="计算机视觉目标"></a>计算机视觉目标</h2><p>跨越语义鸿沟，建立像素到语义的映射（像素矩阵传达信息）</p>
+<p>图像中信息包括：三维场景结构信息，语义信息</p>
+<h2 id="计算机视觉历史-从人类视觉系统到计算机视觉系统"><a href="#计算机视觉历史-从人类视觉系统到计算机视觉系统" class="headerlink" title="计算机视觉历史 从人类视觉系统到计算机视觉系统"></a>计算机视觉历史 从人类视觉系统到计算机视觉系统</h2><ul>
+<li><p>人类视觉系统</p>
+<p>图像——</p>
+<p>优势：高效，快速区分….</p>
+<p>大脑处理受上下文感知，经验影响（快速得出信息）</p>
+<p>劣势：</p>
+<p>运动视盲(更关注主体，其他不太关注)</p>
+<p>大脑处理受上下文感知，经验影响（有时误判）</p>
+</li>
+<li><p>机器视觉系统</p>
+<p>早期计算机视觉问题三个主要层次</p>
+<p>1计算理论</p>
+<p>2表达和算法（最重要） 表达三阶段 输入图像——边缘图——2 1&#x2F;2-D简图——3-D模型</p>
+<p>3硬件实现</p>
+</li>
+</ul>
+<h1 id="图像分类任务"><a href="#图像分类任务" class="headerlink" title="图像分类任务"></a>图像分类任务</h1><h2 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h2><p>目标：根据图像信息所反映的不同特征，把不同类别图像区分开</p>
+<p>图像搜索和识别区别：搜索是找一样的图，识别能知道什么类别</p>
+<h2 id="具体难点"><a href="#具体难点" class="headerlink" title="具体难点"></a>具体难点</h2><p>视角 光照 尺度 遮挡 形变 背景杂波（识别物体与背景相似） 类内形变（比如说不同设计的凳子） 运动模糊（要不换个更好的拍摄设备，要不程序上试图恢复图像）类别繁多</p>
+<h2 id="方法探索"><a href="#方法探索" class="headerlink" title="方法探索"></a>方法探索</h2><ul>
+<li><p>硬编码 基于图像，总结规律，不适合形变复杂的物体</p>
+</li>
+<li><p>数据驱动</p>
+<ol>
+<li><p>数据集构建（有监督 无监督）</p>
+</li>
+<li><p>分类器设计与学习</p>
+<p><img src="/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB%E4%BB%BB%E5%8A%A1%E4%BB%8B%E7%BB%8D/1708254665978.png" alt="1708254665978"></p>
+<ul>
+<li>图像表示<br>像素表示  全局特征表示（如GIST）局部特征表示（如SIFT特征+词袋模型）</li>
+<li>分类器<br>j近邻分类器 贝叶斯 线性 支撑向量机 神经网络 随机森林</li>
+<li>损失函数<br>00-1损失 L1损失。。。</li>
+<li>优化方法<br>y一阶方法比如 梯度下降 随机梯度下降 小批量随机梯度下降 二阶比如牛顿法 BFGS</li>
+<li>训练过程<br>s数据集划分 数据预处理 数据增强（比如把图像旋转，增加一些样本） 欠拟合与过拟合 超参数调整 模型集成</li>
+</ul>
+</li>
+<li><p>分类器决策</p>
+<p><img src="/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB%E4%BB%BB%E5%8A%A1%E4%BB%8B%E7%BB%8D/1708254827591.png" alt="1708254827591"></p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="评价指标"><a href="#评价指标" class="headerlink" title="评价指标"></a>评价指标</h2><p>正确率</p>
+<p><img src="/image/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB%E4%BB%BB%E5%8A%A1%E4%BB%8B%E7%BB%8D/1708255668637.png" alt="1708255668637"></p>
+<p>错误率&#x3D;1-正确率</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/02/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB%E4%BB%BB%E5%8A%A1%E4%BB%8B%E7%BB%8D/" data-id="clsrff5b10001aktldbrr1yrw" data-title="计算机视觉与深度学习-图像分类任务介绍" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/02/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E6%80%A7%E5%88%86%E7%B1%BB%E5%99%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          计算机视觉与深度学习-线性分类器
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/01/28/%E6%88%91%E5%9B%9E%E6%9D%A5%E4%BA%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">我回来了</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">二月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">一月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">九月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">四月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">三月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">一月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">十一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/02/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E6%80%A7%E5%88%86%E7%B1%BB%E5%99%A8/">计算机视觉与深度学习-线性分类器</a>
+          </li>
+        
+          <li>
+            <a href="/2024/02/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB%E4%BB%BB%E5%8A%A1%E4%BB%8B%E7%BB%8D/">计算机视觉与深度学习-图像分类任务介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/28/%E6%88%91%E5%9B%9E%E6%9D%A5%E4%BA%86/">我回来了</a>
+          </li>
+        
+          <li>
+            <a href="/2023/09/04/java%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E8%B7%B5/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/04/27/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E8%AE%BA%E6%96%87/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 missbyebye<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
